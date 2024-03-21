@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Health Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Appointments</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="profile">
+            <h2>Profile</h2>
+            <!-- PHP code to fetch and display profile information -->
+            <?php
+            // Example PHP code to fetch profile information from database
+            $username = "user123";
+            $email = "user123@example.com";
+            echo "<p>Username: $username</p>";
+            echo "<p>Email: $email</p>";
+            ?>
+        </section>
+        
+        <section id="appointments">
+            <h2>Appointments</h2>
+            <!-- PHP code to fetch and display appointments -->
+            <?php
+            // Example PHP code to fetch appointments from database
+            $appointments = array(
+                array("date" => "2024-03-21", "time" => "10:00 AM", "doctor" => "Dr. Smith"),
+                array("date" => "2024-03-25", "time" => "2:30 PM", "doctor" => "Dr. Johnson")
+            );
+            foreach ($appointments as $appointment) {
+                echo "<p>Date: " . $appointment['date'] . "</p>";
+                echo "<p>Time: " . $appointment['time'] . "</p>";
+                echo "<p>Doctor: " . $appointment['doctor'] . "</p>";
+                echo "<hr>";
+            }
+            ?>
+        </section>
+        
+        <!-- Add more sections for different features of the health management system -->
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Health Management System. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Example JavaScript code for interactive features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Example: Display a confirmation message when a user clicks a button
+            const cancelButton = document.getElementById('cancelButton');
+            cancelButton.addEventListener('click', function() {
+                const confirmation = confirm('Are you sure you want to cancel this appointment?');
+                if (confirmation) {
+                    alert('Appointment canceled successfully.');
+                    // Add code here to update the database or perform other actions
+                }
+            });
+        });
+    </script>
+</body>
+</html>
