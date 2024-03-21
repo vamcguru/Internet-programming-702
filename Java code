@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Management System</title>
+    <style>
+        /* CSS styles */
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        /* Add more styles as needed */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Health Management System</h1>
+        <div id="profile">
+            <h2>Profile</h2>
+            <p id="username">Username: </p>
+            <p id="email">Email: </p>
+        </div>
+        
+        <div id="appointments">
+            <h2>Appointments</h2>
+            <ul id="appointmentList">
+                <!-- Appointment items will be added here -->
+            </ul>
+        </div>
+        
+        <!-- Add more sections for different features of the health management system -->
+    </div>
+    
+    <script>
+        // JavaScript code
+        document.addEventListener('DOMContentLoaded', function() {
+            // Example profile data
+            const profileData = {
+                username: "JohnDoe",
+                email: "johndoe@example.com"
+            };
+            
+            // Display profile information
+            document.getElementById('username').textContent += profileData.username;
+            document.getElementById('email').textContent += profileData.email;
+            
+            // Example appointment data
+            const appointments = [
+                { date: '2024-03-21', time: '10:00 AM', doctor: 'Dr. Smith' },
+                { date: '2024-03-25', time: '2:30 PM', doctor: 'Dr. Johnson' }
+            ];
+            
+            // Display appointments
+            const appointmentList = document.getElementById('appointmentList');
+            appointments.forEach(appointment => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `Date: ${appointment.date}, Time: ${appointment.time}, Doctor: ${appointment.doctor}`;
+                appointmentList.appendChild(listItem);
+            });
+            
+            // Add more JavaScript functionality as needed
+        });
+    </script>
+</body>
+</html>
